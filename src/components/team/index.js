@@ -13,6 +13,7 @@ import Static from "./static";
 //
 // Redux
 import { fetchTeam } from "actions/teams";
+import { fetchInvites } from "actions/invites";
 
 export class Team extends Component {
 
@@ -21,6 +22,7 @@ export class Team extends Component {
   //---------------------------------------------------------------------------
   componentWillMount() {
     this.requestTeam(this.props);
+    this.requestInvites(this.props);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -39,12 +41,19 @@ export class Team extends Component {
     if (id) return dispatch(fetchTeam(id));
   }
 
+  requestInvites = (props) => {
+    const { dispatch } = props;
+
+    dispatch(fetchInvites());
+  }
+
   //---------------------------------------------------------------------------
   // Render
   //---------------------------------------------------------------------------
   render() {
-    const { editable, team } = this.props;
+    const { editable, team, invite } = this.props;
 
+    if (invite.length > 0) return <div>I have an invite to responde to.</div>;
     return editable
     ? <Editable team={team} />
     : <Static team={team} />;
@@ -57,6 +66,7 @@ export default compose(
 
   connect((state, props) => ({
     team: state.teams[props.id],
+    invite: state.invites.filter((invite) => invite.invitee === state.currentUser.id),
   })),
 
   setPropTypes({

@@ -41,3 +41,8 @@ export const UPDATE_PROJECT = "UPDATE_PROJECT";
 export const FETCH_PROJECT = "FETCH_PROJECT";
 export const ADD_PROJECT = "ADD_PROJECT";
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
+
+//
+// invites
+export const FETCH_INVITES = "FETCH_INVITES";
+export const SET_INVITES = "SET_INVITES";
