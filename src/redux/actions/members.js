@@ -15,6 +15,7 @@ import {
   ACCEPT_INVITE,
   REJECT_INVITE,
 } from "action-types";
+
 import { fetchTeam } from "actions/teams";
 
 export const inviteUserToTeam = (userId) => {
@@ -80,7 +81,7 @@ export const acceptInvite = (id, teamId) => {
 
 export const rejectInvite = (id) => {
   return (dispatch) => {
-    dispatch(createAction(REJECT_INVITE)());
+    dispatch(createAction(REJECT_INVITE)(id));
 
     return request
     .delete(`/invites/${id}`)

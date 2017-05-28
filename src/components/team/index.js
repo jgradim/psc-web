@@ -65,10 +65,12 @@ export class Team extends Component {
 
   renderInviteLinks = (invite, index) => {
     return (
-      <div key={`invite-${index}`}>
+      <div className="InviteLinks" key={`invite-${index}`}>
         <p>You have been invited to Team {invite.team.name}</p>
-        <Button onClick={this.acceptInviteCallback(invite.id, invite.team.id)} fakelink>Accept</Button>
-        <Button onClick={this.rejectInviteCallback(invite.id)} fakelink>Reject</Button>
+        <div className="cta">
+          <Button onClick={() => this.acceptInviteCallback(invite.id, invite.team.id)} fakelink>Accept</Button>
+          <Button onClick={() => this.rejectInviteCallback(invite.id)} fakelink>Reject</Button>
+        </div>
       </div>
     );
   }
@@ -93,7 +95,7 @@ export default compose(
 
   connect((state, props) => ({
     team: state.teams[props.id],
-    invites: state.invites,
+    invites: state.invites.filter((invite) => !invite.accepted),
   })),
 
   setPropTypes({
