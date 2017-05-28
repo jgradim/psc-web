@@ -7,6 +7,7 @@ import ready from "./ready";
 import teams from "./teams";
 import projects from "./projects";
 import users from "./users";
+import invites from "./invites";
 
 export default combineReducers({
   form,
@@ -16,4 +17,5 @@ export default combineReducers({
   teams,
   projects,
   users,
+  invites,
 });
