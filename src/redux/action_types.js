@@ -33,6 +33,10 @@ export const REFRESH_TEAM = "REFRESH_TEAM";
 // team members / invites
 export const INVITE_USER_TO_TEAM = "INVITE_USER_TO_TEAM";
 export const REVOKE_INVITE = "REVOKE_INVITE";
+export const FETCH_INVITES = "FETCH_INVITES";
+export const SET_INVITES = "SET_INVITES";
+export const ACCEPT_INVITE = "ACCEPT_INVITE";
+export const REJECT_INVITE = "REJECT_INVITE";
 
 //
 // project
@@ -41,8 +45,3 @@ export const UPDATE_PROJECT = "UPDATE_PROJECT";
 export const FETCH_PROJECT = "FETCH_PROJECT";
 export const ADD_PROJECT = "ADD_PROJECT";
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
-
-//
-// invites
-export const FETCH_INVITES = "FETCH_INVITES";
-export const SET_INVITES = "SET_INVITES";

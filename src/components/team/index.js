@@ -9,11 +9,12 @@ import { connect } from "react-redux";
 // Components
 import Editable from "./editable";
 import Static from "./static";
+import Button from "uikit/button";
 
 //
 // Redux
 import { fetchTeam } from "actions/teams";
-import { fetchInvites } from "actions/invites";
+import { fetchInvites, acceptInvite, rejectInvite } from "actions/members";
 
 export class Team extends Component {
 
@@ -33,6 +34,21 @@ export class Team extends Component {
   }
 
   //---------------------------------------------------------------------------
+  // Callbacks
+  //---------------------------------------------------------------------------
+  acceptInviteCallback = (id, teamId) => {
+    const { dispatch } = this.props;
+
+    return dispatch(acceptInvite(id, teamId));
+  }
+
+  rejectInviteCallback = (id) => {
+    const { dispatch } = this.props;
+
+    return dispatch(rejectInvite(id));
+  }
+
+  //---------------------------------------------------------------------------
   // Helpers
   //---------------------------------------------------------------------------
   requestTeam = (props) => {
@@ -47,13 +63,24 @@ export class Team extends Component {
     dispatch(fetchInvites());
   }
 
+  renderInviteLinks = (invite, index) => {
+    return (
+      <div key={`invite-${index}`}>
+        <p>You have been invited to Team {invite.team.name}</p>
+        <Button onClick={this.acceptInviteCallback(invite.id, invite.team.id)} fakelink>Accept</Button>
+        <Button onClick={this.rejectInviteCallback(invite.id)} fakelink>Reject</Button>
+      </div>
+    );
+  }
+
   //---------------------------------------------------------------------------
   // Render
   //---------------------------------------------------------------------------
   render() {
-    const { editable, team, invite } = this.props;
+    const { editable, team, invites } = this.props;
 
-    if (invite.length > 0) return <div>I have an invite to responde to.</div>;
+    if (invites.length > 0) return <div>{invites.map((invite, index) => this.renderInviteLinks(invite, index))}</div>;
+
     return editable
     ? <Editable team={team} />
     : <Static team={team} />;
@@ -66,7 +93,7 @@ export default compose(
 
   connect((state, props) => ({
     team: state.teams[props.id],
-    invite: state.invites.filter((invite) => invite.invitee === state.currentUser.id),
+    invites: state.invites,
   })),
 
   setPropTypes({
