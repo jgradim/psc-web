@@ -1988,11 +1988,7 @@ ajv-errors@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.1.tgz#f35986aceb91afadec4102fbd85014950cefa64d"
 
-ajv-keywords@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.1.0.tgz#ac2b27939c543e95d2c06e7f7f5c27be4aa543be"
-
-ajv-keywords@^3.4.1:
+ajv-keywords@^3.1.0, ajv-keywords@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.4.1.tgz#ef916e271c64ac12171fd8384eaae6b2345854da"
 
@@ -2005,15 +2001,7 @@ ajv@^5.1.0, ajv@^5.3.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-ajv@^6.1.0:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.2.1.tgz#28a6abc493a2abe0fb4c8507acaedb43fa550671"
-  dependencies:
-    fast-deep-equal "^1.0.0"
-    fast-json-stable-stringify "^2.0.0"
-    json-schema-traverse "^0.3.0"
-
-ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.1, ajv@^6.5.5:
+ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.1, ajv@^6.5.5:
   version "6.10.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.2.tgz#d3cea04d6b017b2894ad69040fec8b623eb4bd52"
   dependencies:
@@ -6472,7 +6460,7 @@ loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
 
-loader-utils@1.2.3, loader-utils@^1.2.3:
+loader-utils@1.2.3, loader-utils@^1.0.2, loader-utils@^1.0.3, loader-utils@^1.1.0, loader-utils@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
   dependencies:
@@ -6488,14 +6476,6 @@ loader-utils@^0.2.16:
     emojis-list "^2.0.0"
     json5 "^0.5.0"
     object-assign "^4.0.1"
-
-loader-utils@^1.0.2, loader-utils@^1.0.3, loader-utils@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
-  dependencies:
-    big.js "^3.1.3"
-    emojis-list "^2.0.0"
-    json5 "^0.5.0"
 
 locate-path@^2.0.0:
   version "2.0.0"
@@ -9445,9 +9425,9 @@ serialize-javascript@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.4.0.tgz#7c958514db6ac2443a8abc062dc9f7886a7f6005"
 
-serialize-javascript@^1.7.0:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.9.1.tgz#cfc200aef77b600c47da9bb8149c943e798c2fdb"
+serialize-javascript@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-2.1.2.tgz#ecec53b0e0317bdc95ef76ab7074b7384785fa61"
 
 serve-favicon@^2.5.0:
   version "2.5.0"
@@ -10236,15 +10216,15 @@ term-size@^1.2.0:
   dependencies:
     execa "^0.7.0"
 
-terser-webpack-plugin@^1.2.4, terser-webpack-plugin@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.4.1.tgz#61b18e40eaee5be97e771cdbb10ed1280888c2b4"
+terser-webpack-plugin@^1.2.4, terser-webpack-plugin@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.4.3.tgz#5ecaf2dbdc5fb99745fd06791f46fc9ddb1c9a7c"
   dependencies:
     cacache "^12.0.2"
     find-cache-dir "^2.1.0"
     is-wsl "^1.1.0"
     schema-utils "^1.0.0"
-    serialize-javascript "^1.7.0"
+    serialize-javascript "^2.1.2"
     source-map "^0.6.1"
     terser "^4.1.2"
     webpack-sources "^1.4.0"
@@ -10855,23 +10835,16 @@ webpack-merge@^4.2.2:
   dependencies:
     lodash "^4.17.15"
 
-webpack-sources@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.1.0.tgz#a101ebae59d6507354d71d8013950a3a8b7a5a54"
-  dependencies:
-    source-list-map "^2.0.0"
-    source-map "~0.6.1"
-
-webpack-sources@^1.4.0, webpack-sources@^1.4.1:
+webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.33.0, webpack@^4.38.0, webpack@^4.41.2:
-  version "4.41.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.2.tgz#c34ec76daa3a8468c9b61a50336d8e3303dce74e"
+webpack@^4.33.0, webpack@^4.38.0, webpack@^4.41.5:
+  version "4.41.5"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.41.5.tgz#3210f1886bce5310e62bb97204d18c263341b77c"
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
@@ -10893,7 +10866,7 @@ webpack@^4.33.0, webpack@^4.38.0, webpack@^4.41.2:
     node-libs-browser "^2.2.1"
     schema-utils "^1.0.0"
     tapable "^1.1.3"
-    terser-webpack-plugin "^1.4.1"
+    terser-webpack-plugin "^1.4.3"
     watchpack "^1.6.0"
     webpack-sources "^1.4.1"
 
