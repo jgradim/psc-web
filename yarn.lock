@@ -466,12 +466,13 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-decorators" "^7.2.0"
 
-"@babel/plugin-proposal-do-expressions@^7.6.0":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-do-expressions/-/plugin-proposal-do-expressions-7.6.0.tgz#192953fed8620d13d12a61f68defd26f41059193"
+"@babel/plugin-proposal-do-expressions@^7.10.1":
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-do-expressions/-/plugin-proposal-do-expressions-7.10.1.tgz#ef99f594320f38c300ed2404d6ca83b00c858905"
+  integrity sha512-rjAoAQl6YLsY9C60zQBVTBsDP8YUWlgSv7qRdG8rapQYl+WL1LIVq23SHDCPllaNrE8bqO9csBooTL4yXr7FnA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-syntax-do-expressions" "^7.2.0"
+    "@babel/helper-plugin-utils" "^7.10.1"
+    "@babel/plugin-syntax-do-expressions" "^7.10.1"
 
 "@babel/plugin-proposal-dynamic-import@^7.10.1", "@babel/plugin-proposal-dynamic-import@^7.5.0":
   version "7.10.1"
@@ -588,11 +589,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-do-expressions@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-do-expressions/-/plugin-syntax-do-expressions-7.2.0.tgz#f3d4b01be05ecde2892086d7cfd5f1fa1ead5a2a"
+"@babel/plugin-syntax-do-expressions@^7.10.1":
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-do-expressions/-/plugin-syntax-do-expressions-7.10.1.tgz#18ad0be2e2808991101c708e56d2ca5e7a9f96d9"
+  integrity sha512-Me/wISm2f76puo3Heyu01tthw7/8HSTn2aaiDahWD1K9oRPfzygW0eBcLIrTUdhr58MUyrSLduhUM7uZry6vzg==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.10.1"
 
 "@babel/plugin-syntax-dynamic-import@7.2.0":
   version "7.2.0"
